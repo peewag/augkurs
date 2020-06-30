@@ -1,17 +1,22 @@
 <!DOCTYPE HTML>
 <html>
-<head>
- blablabla
- </head>
- <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
-    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>-M
- <body style="margin: 0px; overflow: hidden;">
- <a-scene embedded arjs='sourceType: webcam;'>
-  <a-marker preset='hiro'>
-    <a-sphere color="yellow" radius="5"></a-sphere>
-    </a-box>
-  </a-marker>  
- 
- </a-scene>
- </body>
- </html>
+  <head>
+   <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+   <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script> 
+  </head>
+  <body style="margin: 0px; overflow: hidden">
+    <a-scene>
+      
+      <a-asset>
+        <a-asset-item id="lego2er" src="Duplo.gltf"></a-asset-item>
+      </a-asset>
+      
+      <a-marker preset='hiro'>
+        <!-- a-sphere position='0 0 0' material='color: yellow;' radius='0.3'><a-sphere-->
+        <a-entity gltf-model="#lego2er"></a-entity>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+
+</html>
